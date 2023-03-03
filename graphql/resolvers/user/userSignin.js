@@ -8,16 +8,15 @@ module.exports = {
 
     loginUser: async (args) => {
         const user = await User.findOne({ email: args.userInput.email });
-        if (!user) {
-            throw new Error('User does not exist!');
-        }
+        if (!user) throw new Error('User does not exist!');
+
         const isEqual = await bcrypt.compare(args.userInput.password, user.password);
-        if (!isEqual) {
-            throw new Error('Password is incorrect!');
-        }
+
+        if (!isEqual) throw new Error('Password is incorrect!');
+
         const token = jwt.sign(
             { userId: user.id, email: user.email },
-            'somesupersecretkey',
+            process.env.JWT_SECRET,
             {
                 expiresIn: '1h'
             }
