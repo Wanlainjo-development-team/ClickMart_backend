@@ -1,6 +1,8 @@
 // import resolvers
-const userResolvers = require('./user/userSignup');
+const userSignupResolvers = require('./user/userSignup');
+const userSigninResolvers = require('./user/userSignin');
 
 module.exports = {
-    ...userResolvers
+    ...userSignupResolvers,
+    ...userSigninResolvers
 }

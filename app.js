@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json({ limit: "50mb" }))
 
 // use graphql
-app.use('/graphql', graphqlHTTP({
+app.use('/', graphqlHTTP({
     schema: userScheme,
     rootValue: userResolver,
     graphiql: process.env.NODE_ENV === 'development' ? true : false,
