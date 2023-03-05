@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
 
     // secondary info
     avatar: { type: String },
+    avatar_public_id: { type: String },
     rating: { type: Number },
     phone: { type: String },
 

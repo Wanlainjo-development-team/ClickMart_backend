@@ -9,6 +9,7 @@ module.exports = buildSchema(`
         token: String
         tokenExpiration: Int
         avatar: String
+        avatar_public_id: String
         rating: Float
         phone: String
         gender: String
@@ -64,6 +65,7 @@ module.exports = buildSchema(`
         token: String
         tokenExpiration: Int
         avatar: String
+        avatar_public_id: String
         rating: Float
         phone: String
         gender: String
