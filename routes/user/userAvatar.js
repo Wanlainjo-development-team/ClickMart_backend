@@ -1,7 +1,7 @@
 const router = require("express").Router()
 const fs = require("fs")
 
-const User = require('../../../models/user')
+const User = require('../../models/user')
 
 const cloudinary = require("../../middleware/cloudinary")
 const upload = require("../../middleware/multer")
