@@ -39,7 +39,7 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 app.use('/rest', [
-    require('./graphql/resolvers/user/userAvatar')
+    require('./routes/user/userAvatar')
 ])
 
 // use port

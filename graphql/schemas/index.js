@@ -114,8 +114,25 @@ module.exports = buildSchema(`
         response: String
     }
 
+    type Ad {
+        _id: ID!
+        name: String
+        description: String
+        price: Float
+        quantity: Float
+        user: ID!
+    }
+
+    input adInput {
+        name: String
+        description: String
+        price: Float
+        quantity: Float
+    }
+
     type RootQuery {
         users: [User!]!
+        ad: [Ad]!
     }
 
     type RootMutation {
